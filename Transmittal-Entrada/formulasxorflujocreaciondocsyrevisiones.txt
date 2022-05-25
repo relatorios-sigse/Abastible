@@ -1,0 +1,67 @@
+/**
+Creación:
+https://abastible.softexpert.com/
+2022-05-25. Andrés Del Río. Estas son las fórmulas configuradas en el XOR del flujo de proceso.
+Versión: 2.1.6.215
+Flujo de proceso: AP000002 - CREACION DE DOCUMENTO / REVISIÓN
+
+Modificaciones:
+<AAAA-MM-DD>. Autor. Descripción
+<AAAA-MM-DD>. Autor. Descripción
+**/
+
+--1
+elaborador = VALORCAMPO('tbgridtranform';'iduser1')
+ingeespecialidad = VALORCAMPO('tbgridtranform';'iduser2')
+aprobador = VALORCAMPO('tbgridtranform';'iduser3')
+
+nuevodocumento = VALORCAMPO('tbgridtranform';'documento')
+
+SI(nuevodocumento = 1 Y elaborador <> '' Y aprobador <> '')
+     DEVUELVE VERDADERO
+FIN
+
+--2
+elaborador = VALORCAMPO('tbgridtranform';'iduser1')
+ingeespecialidad = VALORCAMPO('tbgridtranform';'iduser2')
+aprobador = VALORCAMPO('tbgridtranform';'iduser3')
+
+nuevodocumento = VALORCAMPO('tbgridtranform';'documento')
+
+SI(nuevodocumento <> 1 Y elaborador <> '' Y ingeespecialidad <> '' Y aprobador <> '')
+     DEVUELVE VERDADERO
+FIN
+
+
+--3
+elaborador = VALORCAMPO('tbgridtranform';'iduser1')
+ingeespecialidad = VALORCAMPO('tbgridtranform';'iduser2')
+aprobador = VALORCAMPO('tbgridtranform';'iduser3')
+
+nuevodocumento = VALORCAMPO('tbgridtranform';'documento')
+
+SI(nuevodocumento <> 1 Y elaborador <> '' Y aprobador <> '')
+     DEVUELVE VERDADERO
+FIN
+
+--4
+elaborador = VALORCAMPO('tbgridtranform';'iduser1')
+ingeespecialidad = VALORCAMPO('tbgridtranform';'iduser2')
+aprobador = VALORCAMPO('tbgridtranform';'iduser3')
+
+nuevodocumento = VALORCAMPO('tbgridtranform';'documento')
+
+SI(nuevodocumento = 1 Y elaborador = '' Y aprobador = '')
+     DEVUELVE VERDADERO
+FIN
+
+--5
+elaborador = VALORCAMPO('tbgridtranform';'iduser1')
+ingeespecialidad = VALORCAMPO('tbgridtranform';'iduser2')
+aprobador = VALORCAMPO('tbgridtranform';'iduser3')
+
+nuevodocumento = VALORCAMPO('tbgridtranform';'documento')
+
+SI(nuevodocumento <> 1 Y elaborador = '' Y aprobador = '')
+     DEVUELVE VERDADERO
+FIN
